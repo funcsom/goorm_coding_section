@@ -15,7 +15,7 @@ body {
   align-items: center;
 }
 
-.wrapper {
+.card {
   background-color: var(--color-box-primary);
   border-radius: 12px;
   padding: 32px;
@@ -25,11 +25,17 @@ body {
   gap: 120px;
 }
 
-.about {
+.card__about {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
+/* .card__image { 외안됨? 흑흑 귀차나
+  width: 245px;
+  height: 245px;
+  border-radius: 122.5px;
+} */
 
 img {
   width: 245px;
@@ -37,74 +43,67 @@ img {
   border-radius: 122.5px;
 }
 
-.contents {
+.card__info {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-form > div {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-
-.contact {
+.card__info-contact {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
 }
 
+.card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card__form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
 /* --------------------상세 스타일 관련-------------------- */
 
-.header {
+.card__title {
   font-size: var(--font-xx-large);
   font-weight: 600;
 }
 
-.name {
+.card__info-title {
   font-size: var(--font-x-large);
   font-weight: 600;
 }
 
-.contents > p:nth-child(2) {
+.card__info-content {
   color: var(--color-text-secondary);
 }
 
-label {
+.card__form-label {
   font-size: var(--font-normal);
   font-weight: 600;
 }
 
-input {
+.card__form-input {
   border: none;
   border-radius: 6px;
   padding: 8px 12px;
   font-size: var(--font-normal);
 }
 
-input::placeholder {
-  color: var(--color-text-disabled);
-}
-
-textarea {
-  border: none;
-  border-radius: 6px;
+.textarea {
   resize: none;
-  padding: 8px 12px;
-  font-size: var(--font-normal);
 }
-textarea::placeholder {
+
+.card__form-input::placeholder {
   color: var(--color-text-disabled);
 }
 
-button {
+.card__form-submitBtn {
   width: 320px;
   height: 35px;
   background-color: var(--color-box-tertiary);
@@ -116,6 +115,6 @@ button {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline var(--color-text-secondary);
   color: var(--color-text-secondary);
 }

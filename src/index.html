@@ -7,61 +7,66 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="about">
-        <header class="header">Profile</header>
-        <img src="../img/polite_cat.jpeg" alt="polite cat" />
-        <div class="contents">
-          <p class="name">funcsom🩷</p>
-          <p>
+    <article class="card">
+      <div class="card__about">
+        <header class="card__title">Profile</header>
+        <figure class="card__image">
+          <img src="../img/polite_cat.jpeg" alt="polite cat" />
+        </figure>
+        <div class="card__info">
+          <p class="card__info-title">funcsom🩷</p>
+          <p class="card__info-content">
             Frontend Engineer who makes the world better place.<br />
             I'm currently taking a Product Design course as a FE Engineer.
             <br />
           </p>
-          <p>Contact me at</p>
-          <div class="contact">
-            <a href="email to:smsungg@naver.com"> smsungg@naver.com </a>
+          <p>Contact me at :</p>
+          <div class="card__info-contact">
+            <a href="mailto:smsungg@naver.com"> smsungg@naver.com </a>
             <a href="tel:+8210-5071-3905">010-5071-3905</a>
           </div>
         </div>
       </div>
-      <div class="form">
-        <form>
-          <div>
-            <label for="name">What is your name?</label>
-            <input
-              required
-              autocomplete="off"
-              type="text"
-              id="name"
-              placeholder="name"
-            />
-          </div>
-          <div>
-            <label for="email">What is your email?</label>
-            <input
-              required
-              autocomplete="off"
-              type="text"
-              id="email"
-              placeholder="email"
-            />
-          </div>
-          <div>
-            <label for="message">Message</label>
-            <textarea
-              rows="6"
-              required
-              autocomplete="off"
-              type="text"
-              id="message"
-              placeholder="Please write what you want to say to me..."
-            ></textarea>
-          </div>
+      <form class="card__form">
+        <div>
+          <label class="card__form-label" for="name">What is your name?</label>
+          <input
+            class="card__form-input"
+            required
+            autocomplete="off"
+            type="text"
+            id="name"
+            placeholder="name"
+          />
+        </div>
+        <div>
+          <label class="card__form-label" for="email"
+            >What is your email?</label
+          >
+          <input
+            class="card__form-input"
+            required
+            autocomplete="off"
+            type="text"
+            id="email"
+            placeholder="email"
+          />
+        </div>
+        <div>
+          <label class="card__form-label" for="message">Message</label>
+          <textarea
+            class="card__form-input textarea"
+            rows="6"
+            required
+            autocomplete="off"
+            type="text"
+            id="message"
+            placeholder="Please write what you want to say to me..."
+          ></textarea>
+        </div>
 
-          <button type="submit">submit</button>
-        </form>
-      </div>
-    </div>
+        <button class="card__form-submitBtn" type="submit">submit</button>
+      </form>
+    </article>
   </body>
 </html>
