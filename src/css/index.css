@@ -1,0 +1,121 @@
+@import url(./globalStyle.css);
+
+body * {
+  font-family: pretendard;
+  font-size: var(--font-small);
+  line-height: 120%;
+}
+
+/* --------------------레이아웃 & box syling 관련-------------------- */
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  background-color: var(--color-box-primary);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 120px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+img {
+  width: 245px;
+  height: 245px;
+  border-radius: 122.5px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+/* --------------------상세 스타일 관련-------------------- */
+
+.header {
+  font-size: var(--font-xx-large);
+  font-weight: 600;
+}
+
+.name {
+  font-size: var(--font-x-large);
+  font-weight: 600;
+}
+
+.contents > p:nth-child(2) {
+  color: var(--color-text-secondary);
+}
+
+label {
+  font-size: var(--font-normal);
+  font-weight: 600;
+}
+
+input {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: var(--font-normal);
+}
+
+input::placeholder {
+  color: var(--color-text-disabled);
+}
+
+textarea {
+  border: none;
+  border-radius: 6px;
+  resize: none;
+  padding: 8px 12px;
+  font-size: var(--font-normal);
+}
+textarea::placeholder {
+  color: var(--color-text-disabled);
+}
+
+button {
+  width: 320px;
+  height: 35px;
+  background-color: var(--color-box-tertiary);
+  color: var(--color-text-secondary);
+  border: none;
+  border-radius: 6px;
+  font-size: var(--font-normal);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-secondary);
+}
