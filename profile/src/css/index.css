@@ -31,17 +31,21 @@ body {
   gap: 20px;
 }
 
-/* .card__image { 외안됨? 흑흑 귀차나
+.card__image {
+  width: 245px;
+  height: 245px;
+  border-radius: 122.5px;
+  background: url(../../img/polite_cat.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* img {
   width: 245px;
   height: 245px;
   border-radius: 122.5px;
 } */
-
-img {
-  width: 245px;
-  height: 245px;
-  border-radius: 122.5px;
-}
 
 .card__info {
   display: flex;
