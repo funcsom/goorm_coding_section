@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./kiosk.css" />
+  </head>
+  <body>
+    <!-- <button type="button" id="ctaBtn">클릭하시오</button>
+    <script>
+      let ctaBtn = document.querySelector("#ctaBtn");
+      // 이벤트 작성하기
+      ctaBtn.addEventListener("click", () => {
+        console.log("클릭했슈");
+      });
+    </script> -->
+
+    <!-- <div class="kiosk">
+      <div class="main_container">
+        <nav>
+          <div>로고</div>
+          <button>홈</button>
+          <button>추천메뉴</button>
+          <button>버거</button>
+          <button>해피 스낵</button>
+          <button>사이드</button>
+          <button>커피</button>
+          <button>디저트</button>
+          <button>음료</button>
+          <button>해피밀</button>
+        </nav>
+        <main>
+          <p>버거</p>
+          <div class="filter">필터</div>
+          <div class="menu_container">메뉴들 리스트</div>
+        </main>
+      </div>
+      <div class="footer_container">
+        <button>QR</button>
+        <div>
+          <div></div>
+          <div><button>처음으로</button><button>도움 기능</button></div>
+        </div>
+      </div>
+    </div> -->
+
+    <h1>Categories</h1>
+    <div id="categories">
+      <button data-name="All">홈</button>
+      <button data-name="Drinks">Drinks</button>
+      <button data-name="Deserts">Deserts</button>
+    </div>
+    <h1>Kiosk</h1>
+    <div id="menu">
+      <!-- 여기에 렌더링 해야함 -->
+      <!-- <button data-name="Coffee" data-price="3000">Coffee (3,000원)</button>
+      <button data-name="Tea" data-price="2500">Tea (2,500원)</button>
+      <button data-name="Cake" data-price="4000">Cake (4,000원)</button> -->
+    </div>
+    <h1>Cart</h1>
+    <div id="cart"></div>
+    <p>Total: <span id="total">0</span>원</p>
+    <script src="./kiosk.js"></script>
+    <!-- DOM 로드 이전에 JS가 실행되면 요소를 찾을 수 없어 오류 발생 -->
+  </body>
+</html>
