@@ -60,32 +60,26 @@ function renderMenu(categoryName) {
   filteredMenu.forEach(({ name, price }) => {
     const menuItem = document.createElement("button");
     menuItem.textContent = `${name} - (${price.toLocaleString()}원)`;
-    menuItem.classList.add(name); // 제거 - 이것도 바꾸어씀~~~~~~~~~~~~~~~~~ 왜 백틱하고 네임했냐 그냥 네임하지
+    menuItem.classList.add(name);
     menuItem.dataset.name = name;
-    menuItem.dataset.price = price; // 제거 - 여기서 문자열로 바뀌나????????????????? 나중에 Number하게..
-
+    menuItem.dataset.price = price;
     menu.appendChild(menuItem);
   });
   // filteredMenu의 배열 값을 돌며, name과 price 프로퍼티를 가져와 버튼 형태로 렌더링
   // classList.add()를 통해 메뉴 버튼의 class를 지정
   // dataset.name과 dataset.price를 통해 해당 버튼의 속성을 지정
   // 만든 메뉴버튼을 차례로 menu html요소의 자식으로 렌더링
-
-  // 제거 - !!!!!!! dataset은 커스텀 속성 "date-어쩌고" 를 js에서 지정해주는 코드이구나!~!!!!!
-
-  // 제거 - updateCart();
-  // 제거 - updateCart() 함수를 호출 <- 결국 한번의 카테고리를 누를 때마다 <- 에.. 이 코드가 필요한가? 필요없다!! 이따가 한번 점검할 때 지우자~
 }
 
 // Menu 섹션에서 메뉴 선택 시 (특정 메뉴 버튼 클릭) 작동
 // 특정 메뉴 클릭 시, 해당 메뉴를 카트에 렌더링하기 위해서 updateCart() 함수 호출
 menu.addEventListener("click", (event) => {
-  const target = event.target; // 제거 - 흠... name이나 price가 있는데 굳이 class를 명시해야할까? ~~~~~~~~~~~~~₩
+  const target = event.target;
   const name = target.dataset.name;
   const price = target.dataset.price;
 
-  // 제거 - if (!name) return;
-  // 이거 지움~~~~~~~~~~~~~~~~~
+  if (!name) return;
+  // 해당 div의 빈 곳을 클릭하면 undefined가 나오는 것을 방지하기 위한 코드!
 
   if (target.classList) {
     if (cart[name]) {
@@ -126,6 +120,7 @@ cartDisplay.addEventListener("click", (event) => {
 function updateCart() {
   cartDisplay.innerHTML = "";
   let total = 0;
+  console.log(cart);
 
   for (const name in cart) {
     const { price, count } = cart[name];
@@ -156,8 +151,8 @@ function updateCart() {
     deleteBtn.dataset.name = name;
     // 하나의 menu 항목에 3가지의 버튼 생성
 
-    item.append(minusBtn);
-    item.append(plusBtn);
+    item.append(decreaseBtn);
+    item.append(increaseBtn);
     item.append(deleteBtn);
 
     cartDisplay.appendChild(item);
