@@ -120,7 +120,6 @@ cartDisplay.addEventListener("click", (event) => {
 function updateCart() {
   cartDisplay.innerHTML = "";
   let total = 0;
-  console.log(cart);
 
   for (const name in cart) {
     const { price, count } = cart[name];

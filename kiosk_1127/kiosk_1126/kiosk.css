@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kiosk {
+  /* width: 500px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.kiosk > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.catetory {
+  display: flex;
+  flex-direction: column;
+}
+
+nav > button {
+  display: block;
+}
+
+nav {
+  width: 300px;
+}

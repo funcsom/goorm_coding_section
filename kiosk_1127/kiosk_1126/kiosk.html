@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./kiosk.css" />
+  </head>
+  <body>
+    <!-- <button type="button" id="ctaBtn">클릭하시오</button>
+    <script>
+      let ctaBtn = document.querySelector("#ctaBtn");
+      // 이벤트 작성하기
+      ctaBtn.addEventListener("click", () => {
+        console.log("클릭했슈");
+      });
+    </script> -->
+
+    <div class="kiosk">
+      <div class="main_container">
+        <nav id="category">
+          <div>로고</div>
+          <button data-name="Home">홈</button>
+          <button data-name="Recommand-Menu">추천메뉴</button>
+          <button data-name="Burger">버거</button>
+          <button data-name="Happy-Snack">해피 스낵</button>
+          <button data-name="Side">사이드</button>
+          <button data-name="Coffee">커피</button>
+          <button data-name="Dessert">디저트</button>
+          <button data-name="Drink">음료</button>
+          <button data-name="Happy-Meal">해피밀</button>
+        </nav>
+        <main>
+          <p>버거</p>
+          <div class="filter">필터</div>
+          <div id="menu" class="menu_container"></div>
+        </main>
+      </div>
+      <div class="footer_container">
+        <button>QR</button>
+        <div>
+          <div id="cart"></div>
+          <div id="total"></div>
+          <div><button>처음으로</button><button>도움 기능</button></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./kiosk.js"></script>
+    <!-- DOM 로드 이전에 JS가 실행되면 요소를 찾을 수 없어 오류 발생 -->
+  </body>
+</html>
